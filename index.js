@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 require('dotenv').config();
 
+const port = process.env.PORT || 9090;
+
 
 const bodyParser = require('body-parser');
 
@@ -16,6 +18,6 @@ app.use((req,res) => {
     res.status(404).send({"message": "error Recurso no encotrado","status":404})
 })
 
-app.listen(9090, () => {
+app.listen(port, () => {
     console.log(`App Running in http://localhost:9090`);
 })
