@@ -16,8 +16,6 @@ app.use((req,res) => {
     res.status(404).send({"message": "error Recurso no encotrado","status":404})
 })
 
-process.env.mivariable = 'Esto';
-
 app.listen(9090, () => {
     console.log(`App Running in http://localhost:9090`);
 })
